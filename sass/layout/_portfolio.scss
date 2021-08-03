@@ -1,0 +1,112 @@
+.filter-button-page {
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  justify-content: center;
+  text-align: center;
+}
+.button-portfolio {
+  padding: 6px 22px;
+  border-radius: 4px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+
+  transition: background-color 250ms var(--cubic-bezier);
+  background-color: var(--button-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+
+  &:hover,
+  &:focus {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+  }
+}
+
+.portfolio-button-list:not(:first-child) {
+  margin-left: 8px;
+}
+
+.portfolio-list-card {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+
+  & .post-name {
+    color: var(--title-text-color);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+
+  & .text {
+    color: var(--primary-text-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+  }
+}
+.potfolio-list-item {
+  margin-left: 30px;
+  margin-top: 30px;
+  border: 1px solid #eeeeee;
+  width: 370px;
+}
+
+.card-description {
+  display: block;
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+.section-portfolio {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.portfolio-link-item {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+/* Overlap */
+.portfolio-link-item {
+  display: block;
+
+  &:hover .overlap,
+  &:focus .overlap {
+    transform: translateY(0%);
+  }
+}
+.img-list-portfolio-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.overlap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  padding: 63px 24px;
+  color: var(--primary-white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+}

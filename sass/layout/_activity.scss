@@ -1,0 +1,29 @@
+.activity__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.activity__list_item:not(:last-child) {
+  margin-right: 30px;
+}
+.activity__overlap-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--primary-white-color);
+}
+.activity__overlap {
+  position: relative;
+}
