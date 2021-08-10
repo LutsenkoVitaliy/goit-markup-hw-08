@@ -1,9 +1,18 @@
 .filter-button-page {
+  margin-bottom: 40px;
   display: flex;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  justify-content: center;
-  text-align: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: -8px;
+  margin-top: -15px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    justify-content: center;
+    text-align: center;
+  }
 }
 .button-portfolio {
   padding: 6px 22px;
@@ -26,15 +35,24 @@
   }
 }
 
-.portfolio-button-list:not(:first-child) {
+.portfolio-button__item {
   margin-left: 8px;
+  margin-top: 15px;
 }
 
 .portfolio-list-card {
   display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 
   & .post-name {
     color: var(--title-text-color);
@@ -52,10 +70,23 @@
   }
 }
 .potfolio-list-item {
-  margin-left: 30px;
-  margin-top: 30px;
-  border: 1px solid #eeeeee;
-  width: 370px;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 370px;
+  }
+}
+.potfolio-list-item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .card-description {

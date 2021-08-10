@@ -23,7 +23,7 @@
     <!--                                  НАВИГАЦИЯ                                     -->
 
     <header class="header">
-      <div class="container">
+      <div class="container container__header">
         <nav class="navigation">
           <a href="./index.html" class="logo__icon"><span>Web</span>Studio</a>
 
@@ -58,6 +58,73 @@
             </a>
           </li>
         </ul>
+        <button class="menu-open" data-menu-open>
+          <svg width="40px" height="40px" class="icon__brg">
+            <use href="./images/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+
+      <!-------------------- MOBILE MENU ----------------------->
+
+      <div class="mobile__menu is-hidden" data-menu>
+        <div class="container">
+          <button class="menu__close-btn" data-menu-close>
+            <svg class="menu__close-icon" width="19" height="19">
+              <use href="./images/sprite.svg#closebackd"></use>
+            </svg>
+          </button>
+          <nav>
+            <ul class="mobile__nav-list list">
+              <li class="mob__nav-item">
+                <a
+                  class="mob__nav-link modile-nav__link--current link"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="mob__nav-item">
+                <a class="mob__nav-link link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mob__nav-item">
+                <a class="mob__nav-link link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="mob-bottom">
+            <ul class="modile__contact-list list">
+              <li class="mob__contact-item">
+                <a class="mob__contact-link-tel link" href="tel:+380961111111">
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="mob__contact-item">
+                <a
+                  class="mob__contact-link-mail link"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="mob__social-list list">
+              <li class="mob__social-item">
+                <a href="" class="mob__social-link link">Instagram</a>
+              </li>
+              <li class="mob__social-item">
+                <a href="" class="mob__social-link link">Twitter</a>
+              </li>
+              <li class="mob__social-item">
+                <a href="" class="mob__social-link link">Facebook</a>
+              </li>
+              <li class="mob__social-item">
+                <a href="" class="mob__social-link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -69,7 +136,7 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button data-modal-open type="button" class="hero__button">
+          <button type="button" class="hero__button" data-modal-open>
             Заказать услугу
           </button>
         </div>
@@ -703,9 +770,9 @@
       </div>
     </footer>
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button data-modal-close type="button" class="modal__button-close">
+        <button type="button" class="modal__button-close" data-modal-close>
           <svg class="modal__button-icon" width="18" height="18">
             <use href="./images/sprite.svg#closebackd"></use>
           </svg>
@@ -780,8 +847,9 @@
           </div>
         </form>
       </div>
-    </div> -->
+    </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
