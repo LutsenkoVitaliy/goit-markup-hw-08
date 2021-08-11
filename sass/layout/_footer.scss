@@ -11,7 +11,7 @@
     align-items: center;
     @media screen and (min-width: 768px) {
       flex-direction: row;
-      align-items: baseline;
+      align-items: flex-start;
       flex-wrap: wrap;
       justify-content: space-around;
     }
@@ -67,6 +67,10 @@
 
 .footer__social-section {
   margin-top: 60px;
+
+  @media screen and (min-width: 758px) {
+    margin-top: 0;
+  }
 
   @media screen and (min-width: 1200px) {
     margin-top: 0;
